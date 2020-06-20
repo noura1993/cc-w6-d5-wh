@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rubber Duck</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
+</head>
+
+<body>
+    <h1>Rubber Duck List</h1>
+    <form id="form">
+        <div class="main">
+            <div class="form-item">
+                <label for="title" class="primary">Title:</label>
+                <input type="text" id="title" required />
+
+                <label for="notes" class="primary">Notes:</label>
+                <input type="text" id="notes" required />
+
+                <input class="add" type="submit" value="Add" />
+            </div>
+        </div>
+    </form>
+    <div>
+        <div class="list">
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+</body>
+
+</html>
