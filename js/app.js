@@ -9,17 +9,19 @@ const handleNewTodo = function (event) {
     const todo = createTodo(event.target);
     const todoList = document.querySelector('#todo-list');
     todoList.appendChild(todo);
-  
+    
     event.target.reset();
 };
 
 const createTodo = function (form) {
-    const todo = document.createElement('li');
-    todo.classList.add('todo-item');
+    const todoItem = document.createElement('div');
+    todoItem.classList.add('todo-item');
+
+    const todo = document.createElement('input');
+    todo.classList.add('todo-item-text');
+    todo.readOnly = true;
+    todo.value = `${form.title.value}:  ${form.notes.value}`;
+    todoItem.appendChild(todo);
   
-    const title = document.createElement('h2');
-    title.innerHTML = `${form.title.value}: &nbsp; ${form.notes.value}`;
-    todo.appendChild(title);
-  
-    return todo;
+    return todoItem;
 };
