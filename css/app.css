@@ -43,7 +43,7 @@ h1 {
     font-size: 1rem;
 }
   
-.add {
+.button{
     cursor: pointer;
     width: 5.11rem;
     padding: .44rem 0;
@@ -58,7 +58,7 @@ h1 {
     font-family: cursive;
 }
 
-.add:hover {
+.button:hover {
     background-color: rgb(182, 26, 59);
 }
 

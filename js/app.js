@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const todoForm = document.querySelector('#form');
     todoForm.addEventListener('submit', handleNewTodo);
+
+    const deleteAll = document.querySelector('#delete-all');
+    deleteAll.addEventListener('click', handleDeleteAllClick);
   });
   
 const handleNewTodo = function (event) {
@@ -24,4 +27,9 @@ const createTodo = function (form) {
     todoItem.appendChild(todo);
   
     return todoItem;
+};
+
+const handleDeleteAllClick = function (event) {
+    const todoList = document.querySelector('#todo-list');
+    todoList.innerHTML = '';
 };
